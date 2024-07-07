@@ -1,0 +1,24 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/css2?family=Russo+One&family=Yantramanav:wght@100;300;400;500;700;900&display=swap"
+  rel="stylesheet">
+<div class="navbar">
+  <ul>
+    <li><a routerLink="/resume" routerLinkActive="active">Resume</a></li>
+    <li><a routerLink="/project" routerLinkActive="active">Project</a></li>
+    <li><a routerLink="/skills" routerLinkActive="active">Skills</a></li>
+    <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+    <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+    <li><a routerLink="/home" routerLinkActive="active" 
+      [routerLinkActiveOptions]={exact:true}>Home</a></li>
+    <li><a class="logo">KMV
+      </a></li>
+  </ul>
+</div>
+
+
+<div class="main">
+  <router-outlet></router-outlet>
+</div>
