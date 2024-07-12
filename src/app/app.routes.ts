@@ -8,6 +8,7 @@ import { ErrorComponent } from './error/error.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ResumeComponent } from './resume/resume.component';
 import { AdminComponent } from './admin/admin.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 export const routes: Routes = [
     {path:'', redirectTo:"home",pathMatch:'full'},
@@ -19,12 +20,13 @@ export const routes: Routes = [
     {path:'project', component:ProjectComponent},
     {path:'skills', component:SkillsComponent},
     {path:'admin', component:AdminComponent},
+    {path:'navbar', component:NavbarComponent},
     {path:'**', component:ErrorComponent},
     
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
+    imports: [RouterModule.forRoot(routes),],
     exports:[RouterModule],
 })
 export class AppRoutingModule{}

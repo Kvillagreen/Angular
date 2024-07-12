@@ -3,15 +3,46 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
 
-<div class="main">
-    <div class="intro">
-        <span class="top">HELLO!<br></span>
-        <span class="top-greet">I'm</span>
-        <span class="name-char"> Karl<br> Villaverde<br></span>
-        <span class="description">Entry-Level Programmer</span>
-    </div>
+<mat-grid-list cols="2" rowHeight="93%">
+    <mat-grid-tile class="intro" [ngClass]="{hidden: (isHandset | async)!.matches}" *ngIf="check" [colspan]="check">
+        <div class="block">
+            <h5 class="text" draggable="false"> HELLO!</h5>
+            <div class="space"></div>
+            <div class="align">
+                <h3 class="text" draggable="false"> I'm </h3>
+                <h3 class="name text" draggable="false">Karl </h3>
+            </div>
+            <div class="space"><br></div>
+            <h3 class="name text lastname" draggable="false">Villaverde</h3>
+            <div class="space"><br></div>
+            <h4 class="text" draggable="false"> Entry-Level Programmer
+            </h4>
+            <button mat-fab type="button" aria-label="toggle sidenav" href="mailto:karlmacariolavillaverde@gmail.com"
+                class="hire-but">HIRE ME
+            </button>
+        </div>
+    </mat-grid-tile>
 
-    <div class="image">
-        <img src="assets/images/kmv.png" alt="me" draggable="false"> 
-    </div>
-</div>
+    <mat-grid-tile *ngIf="tile" [colspan]="tile">
+        <div class="image">
+            <div class="changeSet" [ngClass]="{hidden: !(isHandset | async)!.matches}">
+                <div class="text-intro">
+                    <h5 class="text smaller" draggable="false"> HELLO!</h5>
+                    <div class="space"><br></div>
+                    <div class="align">
+                        <h3 class="text small" draggable="false"> I'm </h3>
+                        <h3 class="name text small" draggable="false">Karl </h3>
+                    </div>
+                    <div class="space"> <br></div>
+                    <h3 class="small name text lastname" draggable="false">Villaverde</h3>
+                    <div class="space"><br> </div>
+                    <h4 class="text small" draggable="false"> Entry-Level Programmer</h4>
+                    <button mat-fab type="button" aria-label="toggle sidenav"
+                        href="mailto:karlmacariolavillaverde@gmail.com" class="hire-but">HIRE ME
+                    </button>
+                </div>
+            </div>
+            <img src="assets/images/kmv.png" alt="me" draggable="false">
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>

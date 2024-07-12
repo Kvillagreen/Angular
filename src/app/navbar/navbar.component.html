@@ -1,0 +1,55 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/css2?family=Russo+One&family=Yantramanav:wght@100;300;400;500;700;900&display=swap"
+  rel="stylesheet">
+
+<link href="https://unpkg.com/@angular2-material/core/overlay/overlay.css" rel="stylesheet">
+<link href="https://unpkg.com/@angular2-material/core/style/core.css" rel="stylesheet">
+<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+
+
+<mat-sidenav-container clas="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" [ngClass]="{hidden: !(isHandset | async)!.matches}" fixedInViewport="true"
+    [attr.role]="isHandset ? 'dialog' : 'navigation'" [mode]="(isHandset | async)!.matches ? 'over' : 'side'"
+    [opened]="!(isHandset | async)!.matches">
+    <mat-toolbar color="primary">Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/home" routerLinkActive="active" (click)="clickme('1')">Home</a>
+      <a mat-list-item routerLink="/about" routerLinkActive="active" (click)="clickme('2')">About</a>
+      <a mat-list-item routerLink="/resume" routerLinkActive="active" (click)="clickme('3')">Resume</a>
+      <a mat-list-item routerLink="/skills" routerLinkActive="active" (click)="clickme('4')">Skills</a>
+      <a mat-list-item routerLink="/project" routerLinkActive="active" (click)="clickme('5')">Project</a>
+      <a mat-list-item routerLink="/contact" routerLinkActive="active" (click)="clickme('6')">Contact</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content color="primary">
+    <mat-toolbar color="primary">
+      <button type="button" aria-label="toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="(isHandset | async)!.matches">
+        <mat-icon aria-label="side nav toggle icon">menu</mat-icon>
+      </button>
+      <a mat-button-flat routerLink="/home" [ngClass]="{changelogo: (isHandset | async)!.matches}"
+        routerLinkActive="active" class="logo">KMV</a>
+      <span class="spacer"></span>
+      <mat-nav-list>
+        <div [ngClass]="{hidden: (isHandset | async)!.matches}">
+          <a [ngClass]="{isactive: clickedItem == '1', menulabel:clickedItem !='1'} " (click)="clickme('1')"
+            mat-button-flat routerLink="/home">Home</a>
+          <a [ngClass]="{isactive: clickedItem == '2', menulabel: clickedItem !='2'} " (click)="clickme('2')"
+            mat-button-flat routerLink="/about">About</a>
+          <a [ngClass]="{isactive: clickedItem == '3', menulabel: clickedItem !='3'} " (click)="clickme('3')"
+            mat-button-flat routerLink="/resume" >Resume</a>
+          <a [ngClass]="{isactive: clickedItem == '4', menulabel: clickedItem !='4'} " (click)="clickme('4')"
+            mat-button-flat routerLink="/skills" >Skills</a>
+          <a [ngClass]="{isactive: clickedItem == '5', menulabel: clickedItem !='5'} " (click)="clickme('5')"
+            mat-button-flat routerLink="/project">Project</a>
+          <a [ngClass]="{isactive: clickedItem == '6', menulabel: clickedItem !='6'} " (click)="clickme('6')"
+            mat-button-flat routerLink="/contact">Contact</a>
+        </div>
+      </mat-nav-list>
+    </mat-toolbar>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

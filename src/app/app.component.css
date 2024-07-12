@@ -1,82 +1,16 @@
-.navbar {
-    height: 7%;
-    width: 100%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    overflow-y: hidden;
-    background-color: black;
-    padding-bottom: 5px;
-    display: block;
-}
-
-
-.navbar li {
-    float: right;
-    list-style: none;
-}
-
-/*color: #818181;  */
-
-li > a.active  {
-    color: #FFEA00;
-    text-decoration: underline; 
-    text-decoration-color: #FFEA00;
-    text-underline-offset: 20%;
-} 
-
-li > a  {
-    color: #818181;
-} 
-
-.navbar li a {
-    align-items: end;
-    padding: 6px 8px 6px 16px;
-    font-size: 20px;
-    font-family: "Yantramanav", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    display: block;
-}
-
-a {
-    text-decoration: none;
-}
-
-
-.navbar li a:hover {
-    color: #f1f1f1;
-}
-
-
-.navbar li:first-child {
-    padding-right: 5%;
-}
-
-.navbar li:last-child {
-    padding-right: 35%;
-}
-
-.navbar li .logo {
-    padding-top: 5px;
-    font-size: 35px;
-    font-family: "Russo One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: WHITE;
-}
-
-
-
-/* Style page content */
-.main {
-    margin-top: 7%;
-    position: fixed;
-    overflow-y: hidden;
+html body {
     height: 100%;
+    background-color: black;
+    margin: 0px;
+    padding: 0px;
     width: 100%;
-    z-index: 1;
     top: 0;
     left: 0;
+    z-index: 1;
+    position: fixed;
+    overflow: hidden;
+}
+
+body {
+    margin: 0px;
 }

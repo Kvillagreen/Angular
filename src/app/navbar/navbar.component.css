@@ -1,0 +1,100 @@
+* {
+    overflow: hidden;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+a.logo {
+    padding-left: 15%;
+    font-size: 3.5vw;
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: WHITE;
+    text-decoration: none;
+}
+
+a.changelogo {
+    padding-left: 15%;
+    font-size: 5vw;
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    padding-left: 2%;
+}
+
+.hidden {
+    display: hidden;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.mat-toolbar.mat-primary, .mat-list-item {
+    background: black;
+    color: #fff;
+    height: 7%;
+}
+
+.mat-toolbar a.menulabel:hover {
+    color: #FFEA00;
+    text-decoration: underline;
+    text-underline-offset: 10%;
+}
+
+.isactive{
+    color: #FFEA00;
+    text-decoration: underline;
+    text-underline-offset: 10%;
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 1.6vw;
+    font-family: "Yantramanav", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.mat-sidenav-content.mat-primary {
+    background: black;
+    color: #fff;
+}
+
+.mat-toolbar a.menulabel {
+    display: inline-block;
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.6vw;
+    font-family: "Yantramanav", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+.mat-sidenav-container {
+    overflow: hidden;
+    margin: 0px;
+    height: 100%;
+    min-width: 100%;
+    position: fixed
+}
+
+
+.mat-icon {
+    background-repeat: no-repeat;
+    display: inline-block;
+    fill: currentColor;
+    height: 24px;
+    width: 24px;
+    color: white;
+    transform: scale(1.25);
+}
+
+.sidenav{
+    width: 45%;
+}
+
+.mat-button-flat {
+    background-color: black;
+}
